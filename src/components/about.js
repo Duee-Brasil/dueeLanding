@@ -1,6 +1,7 @@
 import React from "react"
 
-const About = () => <div id="about" class="section">
+const About = () => 
+<div id="about" class="section">
 <div class="block content-1170 center-relative">
   <div class="section-title-holder left">
     <div class="section-num">

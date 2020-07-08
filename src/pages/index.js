@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import './css.css'
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -9,6 +10,7 @@ import Service from "../components/service"
 import Preloader from "../components/preloader"
 import Portfolio from "../components/portfolio"
 import About from "../components/about"
+import News from "../components/news"
 import Video from "../components/video"
 import Skills from "../components/skills"
 import Contact from "../components/contact"
