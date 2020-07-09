@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { BiggerThanMedium } from "./breakpoints"
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import menuIcon from '@iconify/icons-mdi-light/menu';
 
 const Menu = styled.header`

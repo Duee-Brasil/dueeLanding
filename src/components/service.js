@@ -45,21 +45,46 @@ const SectionContent = styled.div`
     }
 `
 
+const SectionNumber = styled.div`
+overflow: hidden;    
+    margin-top: 40px;
+    span
+{    
+    margin-left: -64px;
+    color: #55B286;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 180px;
+    line-height: 100%;
+    letter-spacing: -5px;
+}
+`
+
+const SectionLabel = styled.h2`
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+font-size: 109px;
+width: 245px;
+word-break: break-all;
+line-height: 83px;
+margin-top: 10px;
+color: white;
+margin-left: 115px;
+text-transform: uppercase;
+letter-spacing: -3px;
+padding: 0;
+`
+
 const Service = () => <ServiceStyle id="services">
     <Content>
         <SectionTitle>
-            <div class="section-num">
+            <SectionNumber>
                 <span>01</span>
-            </div>
-            <h2 class="entry-title">Services</h2>
+            </SectionNumber>
+            <SectionLabel>Services</SectionLabel>
         </SectionTitle>
         <SectionContent>
             <div class="content-wrapper">
-                <script>
-                    var slider1_speed = "500";
-                    var slider1_auto = "false";
-                    var slider1_hover = "true";
-            </script>
                 <div class="image-slider-wrapper relative service slider1">
                     <a id="slider1_next" class="image_slider_next" href="#"><Icon icon={chevronDown} /></a>
 
@@ -141,12 +166,9 @@ const Service = () => <ServiceStyle id="services">
                             </div>
                         </li>
                     </ul>
-                    <div class="clear"></div>
                 </div>
-
             </div>
         </SectionContent>
-        <div class='clear'></div>
     </Content>
 </ServiceStyle>
 
