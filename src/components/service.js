@@ -1,6 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { BiggerThanMedium } from './breakpoints'
+import { Icon } from '@iconify/react';
+import chevronDown from '@iconify/icons-mdi-light/chevron-down';
+
 
 const ServiceStyle = styled.div`
 background-color: #221c5a;
