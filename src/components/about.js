@@ -1,15 +1,124 @@
 import React from "react"
+import styled from "styled-components"
+import { BiggerThanMedium } from './breakpoints'
+
+
+const AboutStyle = styled.div`
+    padding: 0;
+    background-color: rgb(34, 28, 90); 
+    background-image: url("demo-images/background_img_03.jpg"); 
+    background-repeat: no-repeat; 
+    background-position: center top; 
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+`
+
+const Content = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 1200px;
+
+    ${BiggerThanMedium} {
+
+    }
+`
+
+const AboutTitle = styled.div`
+    background-color: #e64b77;
+    font-family: 'Montserrat', sans-serif; 
+    flex: 1;
+
+${BiggerThanMedium} {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 72px;
+    height: 375px;
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+`
+
+const AboutContent = styled.div`
+    flex: 1;
+    background-color: white;
+
+    span {
+        color: #55B286;
+    }
+
+    ${BiggerThanMedium} {
+        flex: 2;
+        background-color: white;
+        padding: 60px 0;
+        margin-top: 385px;
+    }
+`
+
+const AboutNumber = styled.div`
+    overflow: hidden;
+    margin-top: 5px;
+    
+    span {    
+        margin-left: -10px;
+        color: #b24564;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 34px;
+    }
+
+    ${BiggerThanMedium} {
+        margin-top: 20px;
+
+        span {
+            margin-left: -64px;
+            font-weight: 700;
+            font-size: 180px;
+            line-height: 100%;
+            letter-spacing: -5px;
+        }
+    }
+`
+
+const AboutLabel = styled.h2`
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    width: 100vw;
+    word-break: break-all;
+    color: white;
+    text-align: right;
+    margin: 0;
+    margin-top: -20px;
+    margin-right: -5px;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    padding: 0;
+
+    ${BiggerThanMedium} {
+        font-size: 109px;
+        width: 245px;
+        word-break: break-all;
+        line-height: 83px;
+        margin-top: 10px;
+        color: white;
+        margin-left: 115px;
+        letter-spacing: -3px;
+    }
+`
 
 const About = () => 
-<div id="about" className="section">
-<div className="block content-1170 center-relative">
-  <div className="section-title-holder left">
-    <div className="section-num">
+<AboutStyle id="about">
+<Content>
+  <AboutTitle>
+    <AboutNumber>
       <span>03</span>
-    </div>
-    <h2 className="entry-title">CRAFTERS</h2>
-  </div>
-  <div className="section-content-holder right">
+    </AboutNumber>
+    <AboutLabel>CRAFTERS</AboutLabel>
+  </AboutTitle>
+  <AboutContent className="section-content-holder right">
     <div className="content-wrapper">
       <div className="content-title-holder">
         <p className="content-title">About</p>
@@ -103,9 +212,8 @@ const About = () =>
     </div>
     {/* <!-- end full-width div --> */}
 
-  </div>
-  <div className="clear"></div>
-</div>
-</div>
+  </AboutContent>
+</Content>
+</AboutStyle>
 
 export default About

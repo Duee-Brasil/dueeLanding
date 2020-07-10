@@ -1,14 +1,126 @@
 import React from "react"
+import styled from "styled-components"
+import { BiggerThanMedium } from './breakpoints'
 
-const Skills = () => <div id="skills" className="section">
-<div className="block content-1170 center-relative">
-  <div className="section-title-holder right">
-    <div className="section-num">
+const SkillStyle = styled.div`
+  background-color: rgb(34, 28, 90); 
+  background-image: url("demo-images/item_background_01.jpg"); 
+  background-repeat: no-repeat; 
+  background-position: left top; 
+  background-size: 100%; 
+  padding: 0;
+  display: flex;
+  justify-content: center;
+`
+
+const Content = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 1200px;
+
+    ${BiggerThanMedium} {
+
+    }
+`
+
+const SkillTitle = styled.div`
+    background-color: #32DB8A;
+    font-family: 'Montserrat', sans-serif; 
+    flex: 1;
+    order: 1;
+
+${BiggerThanMedium} {
+    order: 2;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 72px;
+    height: 375px;
+    font-size: 24px;
+    padding-bottom: 10px;
+}   
+`
+
+const SkillContent = styled.div`
+    flex: 1;
+    background-color: white;
+    order: 2;
+
+    span {
+        color: #55B286;
+    }
+
+    ${BiggerThanMedium} {
+        order: 1;
+        flex: 2;
+        background-color: white;
+        padding: 60px 0;
+        margin-top: 385px;
+    }
+`
+
+const SkillNumber = styled.div`
+    overflow: hidden;
+    margin-top: 5px;
+    
+    span {    
+        margin-left: -10px;
+        color: #55B286;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 34px;
+    }
+
+    ${BiggerThanMedium} {
+        margin-top: 20px;
+
+        span {
+            margin-left: -64px;
+            font-weight: 700;
+            font-size: 180px;
+            line-height: 100%;
+            letter-spacing: -5px;
+        }
+    }
+`
+
+const SkillLabel = styled.h2`
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    width: 100vw;
+    word-break: break-all;
+    color: white;
+    text-align: right;
+    margin: 0;
+    margin-top: -20px;
+    margin-right: -5px;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    padding: 0;
+
+    ${BiggerThanMedium} {
+        font-size: 109px;
+        width: 245px;
+        word-break: break-all;
+        line-height: 83px;
+        margin-top: 10px;
+        color: white;
+        margin-left: 115px;
+        letter-spacing: -3px;
+    }
+`
+
+const Skills = () => <SkillStyle id="skills">
+<Content>
+  <SkillTitle>
+    <SkillNumber>
       <span>06</span>
-    </div>
-    <h2 className="entry-title">EXPERTISE</h2>
-  </div>
-  <div className="section-content-holder left">
+    </SkillNumber>
+    <SkillLabel>EXPERTISE</SkillLabel>
+  </SkillTitle>
+  <SkillContent className="section-content-holder left">
     <div className="content-wrapper">
       <div className="content-title-holder">
         <p className="content-title">Skills</p>
@@ -44,9 +156,8 @@ const Skills = () => <div id="skills" className="section">
         </div>
       </div>
     </div>
-  </div>
-  <div className="clear"></div>
-</div>
-</div>
+  </SkillContent>
+</Content>
+</SkillStyle>
 
 export default Skills
