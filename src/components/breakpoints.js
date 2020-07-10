@@ -19,7 +19,13 @@ export const Colors = {
     Pink: '#e71576',
     Yellow: '#FAEA27',
     Blue: '#28ABE3',
-    White: '#fafafa'
+    White: '#fafafa',
+    DarkBlue: '#167da9',
+    LightBlue: '#6cc5ec',
+    DarkPink: '#a10f52',
+    LightPink: '#f0599e',
+    DarkYellow: '#d0c005',
+    LightYellow: '#fcf172'
 }
 
 // /* For desktop: */

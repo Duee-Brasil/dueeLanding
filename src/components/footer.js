@@ -69,8 +69,8 @@ const Footer = () => <FooterStyle>
             © 2020 All rights reserved. | Duee Brasil
         </Copyrights>
         <Socials>
-            <Link to="https://dueebrasil.com.br"><Icon icon={facebookOutlined} /></Link>
-            <Link to="https://dueebrasil.com.br"><Icon icon={instagramOutlined} /></Link>
+            <Link to="https://www.facebook.com/agenciadueebrasil"><Icon icon={facebookOutlined} /></Link>
+            <Link to="https://www.instagram.com/dueebrasil"><Icon icon={instagramOutlined} /></Link>
         </Socials>
     </FooterRow>
 </FooterStyle>

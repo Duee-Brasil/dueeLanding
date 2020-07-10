@@ -27,16 +27,16 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        // Setting a color is optional.
-        color: `pink`,
-        showSpinner: true,
-        easing: 'ease',
-        speed: 500
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-nprogress`,
+    //   options: {
+    //     // Setting a color is optional.
+    //     color: `pink`,
+    //     showSpinner: true,
+    //     easing: 'ease',
+    //     speed: 500
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

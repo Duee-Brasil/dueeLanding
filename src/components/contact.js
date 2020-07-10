@@ -52,7 +52,7 @@ const ContactNumber = styled.div`
     
     span {    
         margin-left: -10px;
-        color: #e3a436;
+        color: ${Colors.DarkBlue};
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         font-size: 34px;

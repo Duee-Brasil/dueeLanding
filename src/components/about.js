@@ -53,7 +53,7 @@ const AboutNumber = styled.div`
     
     span {    
         margin-left: -10px;
-        color: #b24564;
+        color: ${Colors.DarkPink};
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         font-size: 34px;

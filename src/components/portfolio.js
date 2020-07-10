@@ -5,10 +5,10 @@ import background from './demo-images/background_img_02.jpg'
 
 const PortfolioStyle = styled.div`
   background-color: ${Colors.Black}; 
-  background-image: url(${background}); 
+  /* background-image: url(${background}); 
   background-repeat: no-repeat; 
   background-position: center top; 
-  background-size: auto;
+  background-size: auto; */
   padding: 0;
   display: flex;
   justify-content: center;
@@ -59,7 +59,7 @@ const PortfolioNumber = styled.div`
     
     span {    
         margin-left: -10px;
-        color: #e3a436;
+        color: ${Colors.DarkYellow};
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         font-size: 34px;

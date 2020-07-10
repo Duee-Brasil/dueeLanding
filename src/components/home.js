@@ -1,20 +1,25 @@
 import React from "react"
 import styled from "styled-components"
-import { BiggerThanMedium } from "./breakpoints"
-import background from './demo-images/background_img_01b.jpg'
-import logo from './demo-images/logo.png'
+import { BiggerThanMedium, Colors } from "./breakpoints"
+import backgroundWide from '../images/leaocolorido-wide.jpg'
+import backgroundPort from '../images/leaocolorido-portrait.jpg'
+import logo from '../images/logo_branco.png'
 
 const HomeStyle = styled.div`
     padding: 4em 2em 3em 2em;
     height: calc(100vh - 6em);
-    background-color: #000; 
-    background-image: url(${background});
+    background-color: ${Colors.White}; 
+    background-image: url(${backgroundPort});
     background-repeat: repeat; 
     background-position: center top; 
     background-size: cover;
     display: flex;
     justify-content: center;
     align-content: center;
+
+    ${BiggerThanMedium} {
+        background-image: url(${backgroundWide});
+    }
 `
 
 const Content = styled.div`
@@ -30,12 +35,9 @@ const Content = styled.div`
 
 const LogoStyle = styled.img`
     width: 120px;
-    height: 120px;
-    margin-bottom: 40px;
 
     ${BiggerThanMedium} {
-        width: 160px;
-        height: 160px;
+        width: 250px;
     }
 `
 
@@ -74,11 +76,11 @@ const Subtitle = styled.p`
 
 const Home = () => <HomeStyle id="home">
     <Content>
-        <LogoStyle src={logo} alt="Boxus" />
-        <LabelContainer>
+        <LogoStyle src={logo} alt="Duee Brasil" />
+        {/* <LabelContainer>
             <MainLabel>Duee Brasil</MainLabel>
             <Subtitle>Nós fazemos</Subtitle>
-        </LabelContainer>
+        </LabelContainer> */}
     </Content>
 </HomeStyle>
 
