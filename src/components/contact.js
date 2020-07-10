@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { BiggerThanMedium } from './breakpoints'
+import { BiggerThanMedium, Colors } from './breakpoints'
 
 const ContactStyle = styled.div`
     padding: 0;
-    background-color: #221c5a; 
+    background-color: ${Colors.Black}; 
     display: flex;
     justify-content: center;
 `
@@ -15,18 +15,15 @@ const Content = styled.div`
     flex-wrap: wrap;
     width: 100vw;
     max-width: 1200px;
-
-    ${BiggerThanMedium} {
-
-    }
 `
 
 const ContactTitle = styled.div`
-    background-color: rgb(255, 186, 66);
+    background-color: ${Colors.Blue};
     font-family: 'Montserrat', sans-serif; 
     flex: 1;
 
 ${BiggerThanMedium} {
+    order: 2;
     position: sticky;
     position: -webkit-sticky;
     top: 72px;
@@ -39,16 +36,12 @@ ${BiggerThanMedium} {
 
 const ContactContent = styled.div`
     flex: 1;
-    background-color: white;
-
-    span {
-        color: #55B286;
-    }
+    background-color: ${Colors.White};
+    padding: 1em;
 
     ${BiggerThanMedium} {
+        order: 1;
         flex: 2;
-        background-color: white;
-        padding: 60px 0;
         margin-top: 385px;
     }
 `
@@ -84,7 +77,7 @@ const ContactLabel = styled.h2`
     font-size: 45px;
     width: 100vw;
     word-break: break-all;
-    color: white;
+    color: ${Colors.White};
     text-align: right;
     margin: 0;
     margin-top: -20px;
@@ -96,44 +89,67 @@ const ContactLabel = styled.h2`
     ${BiggerThanMedium} {
         font-size: 109px;
         width: 245px;
-        word-break: break-all;
         line-height: 83px;
         margin-top: 10px;
-        color: white;
         margin-left: 115px;
-        letter-spacing: -3px;
     }
+`
+
+const ContactRows = styled.div`
+  padding: 1em;
+  color: ${Colors.BlackText};
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`
+
+const ContactHalfColumn = styled.div`
+  flex-basis: 45%;
+  color: ${Colors.BlackText};
+  padding: 1em;
+  text-align: justify;
+`
+
+const ContactFullRows = styled.div`
+  padding: 1em;
+  justify-content: center;
+
+  iframe {
+    width: 100%;
+    height: 360px;
+    border: none;
+  }
 `
 
 const Contact = () => <ContactStyle id="contact">
   <Content>
     <ContactTitle>
       <ContactNumber>
-        <span>07</span>
+        <span>04</span>
       </ContactNumber>
-      <ContactLabel>Contact</ContactLabel>
+      <ContactLabel>Contato</ContactLabel>
     </ContactTitle>
-    <ContactContent className="section-content-holder right">
-      <div className="content-wrapper">
-        <div className="one_half ">
-          <p>Consectetur adipisicing elit sed eiusmod tempor incididunt ut dolore magna labore eiusmod. Lorem ipsum dolor sit amet consectetur est adipisicing elit, sed do eiusmod tempor.</p>
+    <ContactContent>
+      <ContactRows>
+        <ContactHalfColumn>
+          <p>Quer dar sugestões, tirar suas dúvidas, conhecer melhor a Duee Brasil ou solicitar um contato de nossa equipe?</p>
           <br />
-          <p><strong><span style={{ "color": "#e64b77;" }}>Incididunt ut dolore</span></strong> magna labore eiusmod. Dolor sit amet consectetur est adipisicing elit, sed do eiusmod.</p>
-        </div>
-        <div className="one_half last">
+          <p>É só preencher o formulário corretamente e entraremos em contato!</p>
+        </ContactHalfColumn>
+        <ContactHalfColumn>
           <div className="contact-form">
-            <p><input id="name" type="text" name="your-name" placeholder="Name" /></p>
-            <p><input id="contact-email" type="email" name="your-email" placeholder="Email" /></p>
-            <p><input id="subject" type="text" name="your-subject" placeholder="Subject" /></p>
-            <p><textarea id="message" name="your-message" placeholder="Message"></textarea></p>
+            <p><input id="name" type="text" name="your-name" placeholder="Nome Completo" required/></p>
+            <p><input id="contact-email" type="email" name="your-email" placeholder="E-mail" required/></p>
+            <p><input id="contact-email" type="email" name="your-email" placeholder="Telefone" /></p>
+            <p><input id="subject" type="text" name="your-subject" placeholder="Empresa/ Marca" required/></p>
+            <p><textarea id="message" name="your-message" placeholder="Descrição do tipo de negócio" required></textarea></p>
             <p><input type="submit" onClick="SendMail()" value="SEND" /></p>
           </div>
-        </div>
-        <div className="clear"></div>
-      </div>
-      <div className="full-width">
-        <iframe title="a;gumacoisa" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4274.290564544589!2d-75.2952832049782!3d40.753669641460846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srs!4v1444506658649" width="600" height="450" frameborder="0" style={{ "border": "0" }} allowfullscreen></iframe>
-      </div>
+        </ContactHalfColumn>
+      </ContactRows>
+      <ContactFullRows>
+        <iframe title="dueebrasil" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7358.538257808268!2d-45.179879899999996!3d-22.755391499999998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31541a74223471bb!2sDUEE%20BRASIL!5e0!3m2!1spt-BR!2sbr!4v1594355624604!5m2!1spt-BR!2sbr" frameBorder="0" allowFullScreen aria-hidden="false" tabindex="0"></iframe>
+      </ContactFullRows>
     </ContactContent>
   </Content>
 </ContactStyle>

@@ -1,46 +1,23 @@
+html {
+    max-width: 100vw;
+}
+
 body
 {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 26px;
     font-weight: 400;
-    color: #23214c;
+    color: #111;
     margin: 0;
     padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 body a
 {
     text-decoration: none;
-    color: #23214c;
     transition: color .2s linear;
-}
-
-body a:hover
-{
-    color: #ee87a4;
-}
-
-.doc-loader 
-{
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;	
-    background-color: #fff;
-}
-
-.doc-loader td 
-{       
-    text-align: center;
-    vertical-align: middle;
-}
-
-.doc-loader img
-{
-    width: 90px;
-    height: 90px;        
 }
 

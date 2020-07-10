@@ -1,11 +1,11 @@
 import React from "react"
-import styled from "styled-components"
-import { BiggerThanMedium } from './breakpoints'
+import styled, { keyframes, css } from "styled-components"
+import { BiggerThanMedium, Colors } from './breakpoints'
 
 
 const AboutStyle = styled.div`
     padding: 0;
-    background-color: rgb(34, 28, 90); 
+    background-color: ${Colors.Black}; 
     background-image: url("demo-images/background_img_03.jpg"); 
     background-repeat: no-repeat; 
     background-position: center top; 
@@ -20,14 +20,10 @@ const Content = styled.div`
     flex-wrap: wrap;
     width: 100vw;
     max-width: 1200px;
-
-    ${BiggerThanMedium} {
-
-    }
 `
 
 const AboutTitle = styled.div`
-    background-color: #e64b77;
+    background-color: ${Colors.Pink};
     font-family: 'Montserrat', sans-serif; 
     flex: 1;
 
@@ -43,16 +39,10 @@ ${BiggerThanMedium} {
 
 const AboutContent = styled.div`
     flex: 1;
-    background-color: white;
-
-    span {
-        color: #55B286;
-    }
+    background-color: ${Colors.White};
 
     ${BiggerThanMedium} {
         flex: 2;
-        background-color: white;
-        padding: 60px 0;
         margin-top: 385px;
     }
 `
@@ -88,7 +78,7 @@ const AboutLabel = styled.h2`
     font-size: 45px;
     width: 100vw;
     word-break: break-all;
-    color: white;
+    color: ${Colors.White};
     text-align: right;
     margin: 0;
     margin-top: -20px;
@@ -100,120 +90,170 @@ const AboutLabel = styled.h2`
     ${BiggerThanMedium} {
         font-size: 109px;
         width: 245px;
-        word-break: break-all;
         line-height: 83px;
         margin-top: 10px;
-        color: white;
         margin-left: 115px;
-        letter-spacing: -3px;
     }
 `
 
-const About = () => 
-<AboutStyle id="about">
-<Content>
-  <AboutTitle>
-    <AboutNumber>
-      <span>03</span>
-    </AboutNumber>
-    <AboutLabel>CRAFTERS</AboutLabel>
-  </AboutTitle>
-  <AboutContent className="section-content-holder right">
-    <div className="content-wrapper">
-      <div className="content-title-holder">
-        <p className="content-title">About</p>
-      </div>
-      <div className="one_half ">
-        Polor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt ut dolore magna labore eiusmod. Lorem ipsum <strong>dolor sit amet</strong> consectetur est adipisicing elit, sed do eiusmod tempor
-                  </div>
-      <div className="one_half last ">
-        <span style={{"color": "#e54b76;"}}><strong>2001-2003 ·</strong></span> <span style={{"color": "#727190;"}}><em>Art Studio Lorem Donec</em></span><br />
-        <span style={{"color": "#e54b76;"}}><strong>2003-2006 ·</strong></span> <span style={{"color": "#727190;"}}><em>Per Set Web Site</em></span><br />
-        <span style={{"color": "#e54b76;"}}><strong>2006-2010 ·</strong></span> <span style={{"color": "#727190;"}}><em>Setera Donec EstNunc</em></span><br />
-        <span style={{"color": "#e54b76;"}}><strong>2010-2013 ·</strong></span> <span style={{"color": "#727190;"}}><em>Studio Labore Tempor</em></span><br />
-        <span style={{"color": "#e54b76;"}}><strong>2013-2016 ·</strong></span> <span style={{"color": "#727190;"}}><em>Magna Ipsum Amet</em></span><br />
-      </div><div className="clear"></div>
-      <br />
-      <br />
-    </div>
+const AboutRows = styled.div`
+  padding: 1em;
+  color: ${Colors.BlackText};
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`
 
-    <div className="full-width ">
-      <script>
-        var aboutImage_speed = "500";
-        var aboutImage_auto = "false";
-        var aboutImage_hover = "true";
-                  </script>
-      <div className="image-slider-wrapper relative img aboutImage">
-        <a id="aboutImage_next" className="image_slider_next" href="#">??</a>
-        <div className="caroufredsel_wrapper">
-          <ul id="aboutImage" className="image-slider slides">
-            <li><img src="demo-images/about_img_04.jpg" alt="" /></li>
-            <li><img src="demo-images/about_img_05.jpg" alt="" /></li>
-            <li><img src="demo-images/about_img_06.jpg" alt="" /></li>
-          </ul>
-        </div>
-        <div className="clear"></div>
-      </div>
+const Visibility1 = keyframes`
+  2% {
+      visibility: visible;
+  }
 
-      <script>
-        var team1_speed = "500";
-        var team1_auto = "false";
-        var team1_hover = "true";
-                  </script>
-      <div className="image-slider-wrapper relative team team1">
-        <a id="team1_next" className="image_slider_next" href="#"></a>
-        <div className="caroufredsel_wrapper">
-          <ul id="team1" className="image-slider slides">
-            <li>
-              <div className="member-content-holder">
-                <h4 className="member-name">Robert Williams</h4>
-                <p className="member-position">LEAD DESIGNER</p>
-                <div className="member-content">
-                  Eiusmod tempor incididunt ut dolore magna labore eiusmod. Lorem ipsum dolor sit amet consectetur est lorem adipisicing elit, sed do eiusmod tempor polor sit amet consectetur.<br />
-                </div>
-              </div>
-              <div className="member-image-holder">
-                <img src="demo-images/about_img_01.jpg" alt="" />
-              </div>
-              <div className="clear"></div>
-            </li>
+  100% {
+      visibility: hidden;
+  }
+`
 
-            <li>
-              <div className="member-content-holder">
-                <h4 className="member-name">John Doe</h4>
-                <p className="member-position">SEO MASTER</p>
-                <div className="member-content">
-                  Eiusmod tempor incididunt ut dolore magna labore eiusmod. Lorem ipsum dolor sit amet consectetur est lorem adipisicing elit, sed do eiusmod tempor polor sit amet consectetur.<br />
-                </div>
-              </div>
-              <div className="member-image-holder">
-                <img src="demo-images/about_img_02.jpg" alt="" />
-              </div>
-              <div className="clear"></div>
-            </li>
+const Visibility2 = keyframes`
+  14% {
+      visibility: visible;
+  }
 
-            <li>
-              <div className="member-content-holder">
-                <h4 className="member-name">John Doe</h4>
-                <p className="member-position">PSD GURU</p>
-                <div className="member-content">
-                  Eiusmod tempor incididunt ut dolore magna labore eiusmod. Lorem ipsum dolor sit amet consectetur est lorem adipisicing elit, sed do eiusmod tempor polor sit amet consectetur.<br />
-                </div>
-              </div>
-              <div className="member-image-holder">
-                <img src="demo-images/about_img_03.jpg" alt="" />
-              </div>
-              <div className="clear"></div>
-            </li>
-          </ul>
-        </div>
-        <div className="clear"></div>
-      </div>
-    </div>
-    {/* <!-- end full-width div --> */}
+  100% {
+      visibility: hidden;
+  }
+`
 
-  </AboutContent>
-</Content>
-</AboutStyle>
+const Visibility3 = keyframes`
+  28% {
+      visibility: visible;
+  }
+
+  100% {
+      visibility: hidden;
+  }
+`
+
+const Visibility4 = keyframes`
+  42% {
+      visibility: visible;
+  }
+
+  100% {
+      visibility: hidden;
+  }
+`
+
+const Visibility5 = keyframes`
+  56% {
+      visibility: visible;
+  }
+
+  100% {
+      visibility: hidden;
+  }
+`
+
+const Visibility6 = keyframes`
+  70% {
+      visibility: visible;
+  }
+
+  100% {
+      visibility: hidden;
+  }
+`
+
+const Blinder = css`
+span {
+    &:nth-child(1){
+      animation: ${Visibility1} 5s step-end infinite;
+    }
+
+    &:nth-child(2){
+      animation: ${Visibility2} 5s step-end infinite;
+    }
+
+    &:nth-child(3){
+      animation: ${Visibility3} 5s step-end infinite;
+    }
+
+    &:nth-child(4){
+      animation: ${Visibility4} 5s step-end infinite;
+    }
+
+    &:nth-child(5){
+      animation: ${Visibility5} 5s step-end infinite;
+    }
+
+    &:nth-child(6){
+      animation: ${Visibility6} 5s step-end infinite;
+    }
+  }
+`
+
+const AboutFullRows = styled.div`
+  padding: 1em;
+  padding-left: 3em;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.5em;
+  justify-content: center;
+
+  ${Blinder}
+`
+
+const AboutTextTitle = styled.div`
+  flex-basis: 100%;
+  height: 80px;
+  margin-top: -10px;
+  color: ${Colors.Black};
+  word-break: break-all;
+  text-overflow: clip;
+  font-size: 95px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+`
+
+const AboutHalfColumn = styled.div`
+  flex-basis: 45%;
+  color: ${Colors.BlackText};
+  padding: 1em;
+  text-align: justify;
+`
+
+const About = () =>
+  <AboutStyle id="about">
+    <Content>
+      <AboutTitle>
+        <AboutNumber>
+          <span>03</span>
+        </AboutNumber>
+        <AboutLabel>CRAFTERS</AboutLabel>
+      </AboutTitle>
+      <AboutContent>
+        <AboutRows>
+          <AboutTextTitle>
+            SOMOS LEÕES
+          </AboutTextTitle>
+          <AboutHalfColumn>
+            A Duee é uma agência full service, que preza pela comunicação integrada, porque sabe que o mundo não se divide em on e off.
+            Não criamos apenas conteúdos e campanhas, nós geramos ideias e conexões.
+            Nós somos uma agência que acredita que o trabalho está em constante movimento e, por isso, estamos sempre atentos às novidades, ao público, às revoluções e novas ideias.
+                  </AboutHalfColumn>
+          <AboutHalfColumn>
+            É por meio de nossa paixão, criatividade e de estratégias que ajudamos marcas a terem retornos eficientes, se tornarem relevantes e atingirem grandes resultados.
+            O conceito "A Gente Faz" traduz a nossa experiência de 12 anos, o nosso espírito de equipe e de proatividade. É o reflexo do nosso posicionamento como agência 360 graus. A gente faz criativo. A gente faz diferente. A gente faz inteligente.
+          </AboutHalfColumn>
+        </AboutRows>
+
+        <AboutFullRows>
+            <span>Eventos? </span><span>A gente faz.</span><br />
+          <span>Digital? </span><span>A gente faz.</span><br />
+          <span>Branding? </span><span>A gente faz.</span>
+        </AboutFullRows>
+      </AboutContent>
+    </Content>
+  </AboutStyle>
 
 export default About

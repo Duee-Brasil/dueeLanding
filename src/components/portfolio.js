@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { BiggerThanMedium } from './breakpoints'
+import { BiggerThanMedium, Colors } from './breakpoints'
 import background from './demo-images/background_img_02.jpg'
 
 const PortfolioStyle = styled.div`
-  background-color: #221C5A; 
+  background-color: ${Colors.Black}; 
   background-image: url(${background}); 
   background-repeat: no-repeat; 
   background-position: center top; 
@@ -20,14 +20,10 @@ const Content = styled.div`
     flex-wrap: wrap;
     width: 100vw;
     max-width: 1200px;
-
-    ${BiggerThanMedium} {
-
-    }
 `
 
 const PortfolioTitle = styled.div`
-    background-color: rgb(255, 186, 66);
+    background-color: ${Colors.Yellow};
     font-family: 'Montserrat', sans-serif; 
     flex: 1;
     order: 1;
@@ -45,18 +41,13 @@ ${BiggerThanMedium} {
 
 const PortfolioContent = styled.div`
     flex: 1;
-    background-color: white;
+    background-color: ${Colors.White};
     order: 2;
-
-    span {
-        color: #55B286;
-    }
 
     ${BiggerThanMedium} {
         order: 1;
         flex: 2;
-        background-color: white;
-        padding: 60px 0;
+        padding: 2em;
         margin-top: 385px;
     }
 `
@@ -64,6 +55,7 @@ const PortfolioContent = styled.div`
 const PortfolioNumber = styled.div`
     overflow: hidden;
     margin-top: 5px;
+
     
     span {    
         margin-left: -10px;
@@ -92,7 +84,7 @@ const PortfolioLabel = styled.h2`
     font-size: 45px;
     width: 100vw;
     word-break: break-all;
-    color: white;
+    color: ${Colors.White};
     text-align: right;
     margin: 0;
     margin-top: -20px;
@@ -107,7 +99,6 @@ const PortfolioLabel = styled.h2`
         word-break: break-all;
         line-height: 83px;
         margin-top: 10px;
-        color: white;
         margin-left: 115px;
         letter-spacing: -3px;
     }

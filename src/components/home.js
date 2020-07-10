@@ -7,7 +7,7 @@ import logo from './demo-images/logo.png'
 const HomeStyle = styled.div`
     padding: 4em 2em 3em 2em;
     height: calc(100vh - 6em);
-    background-color: #221c5a; 
+    background-color: #000; 
     background-image: url(${background});
     background-repeat: repeat; 
     background-position: center top; 
@@ -35,7 +35,7 @@ const LogoStyle = styled.img`
 
     ${BiggerThanMedium} {
         width: 160px;
-    height: 160px;
+        height: 160px;
     }
 `
 
@@ -68,7 +68,7 @@ const Subtitle = styled.p`
 
     ${BiggerThanMedium} {
         font-size: 22px;
-    line-height: 26px;
+        line-height: 26px;
     }
 `
 

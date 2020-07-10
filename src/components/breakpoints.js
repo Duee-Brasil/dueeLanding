@@ -13,6 +13,14 @@ export const BiggerThanLarge = '@media only screen and (min-width: 992px)'
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 export const BiggerThanXLarge = '@media only screen and (min-width: 1200px)'
 
+export const Colors = {
+    Black: '#111',
+    BlackText: '#424242',
+    Pink: '#e71576',
+    Yellow: '#FAEA27',
+    Blue: '#28ABE3',
+    White: '#fafafa'
+}
 
 // /* For desktop: */
 // .col-1 {width: 8.33%;}

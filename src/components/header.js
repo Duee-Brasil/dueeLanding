@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 import { BiggerThanMedium } from "./breakpoints"
 import { Icon } from '@iconify/react';
@@ -9,7 +8,7 @@ import menuIcon from '@iconify/icons-mdi-light/menu';
 const Menu = styled.header`
   transition: background-color .2s linear;
   z-index: 99 !important;
-  background-color: #221C5A;
+  background-color: #000;
   width: 100vw;
   top: 0;
   position: fixed;
@@ -91,25 +90,15 @@ const Header = () => {
     <Navbar>
       <MenuMobile onClick={() => setIsOpenMenu(!isOpenMenu)}><Icon icon={menuIcon} /></MenuMobile>
       <ListLinks isOpenMenu={isOpenMenu}>
-        <li><Link to="#home">Home</Link></li>
-        <li><Link to="#services">Services</Link></li>
+        <li><Link to="#home">Ínicio</Link></li>
+        <li><Link to="#services">Serviços</Link></li>
         <li><Link to="#portfolio">Portfolio</Link></li>
-        <li><Link to="#about">About</Link></li>
-        <li><Link to="#news">News</Link></li>
-        <li><Link to="#video">Video</Link></li>
+        <li><Link to="#about">Somos Leões</Link></li>
         <li><Link to="#skills">Skills</Link></li>
-        <li><Link to="#contact">Contact</Link></li>
+        <li><Link to="#contact">Contato</Link></li>
       </ListLinks>
     </Navbar>
   </Menu>
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header
