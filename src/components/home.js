@@ -41,38 +41,38 @@ const LogoStyle = styled.img`
     }
 `
 
-const LabelContainer = styled.div`
-    width: 80%;
-    max-width: 900px;
-`
+// const LabelContainer = styled.div`
+//     width: 80%;
+//     max-width: 900px;
+// `
 
-const MainLabel = styled.h1`
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 1;
-    color: #fff;
-    letter-spacing: -1px;
+// const MainLabel = styled.h1`
+//     font-family: 'Montserrat', sans-serif;
+//     font-size: 40px;
+//     font-weight: 600;
+//     line-height: 1;
+//     color: #fff;
+//     letter-spacing: -1px;
 
-    ${BiggerThanMedium} {
-        font-size: 56px;
-    font-weight: 700;
-    }
-`
+//     ${BiggerThanMedium} {
+//         font-size: 56px;
+//     font-weight: 700;
+//     }
+// `
 
-const Subtitle = styled.p`
-    font-family: 'PT Serif', serif;
-    font-size: 18px;
-    line-height: 22px;
-    max-width: 70%; 
-    margin: 0 auto;
-    color: #fff;
+// const Subtitle = styled.p`
+    // font-family: 'PT Serif', serif;
+    // font-size: 18px;
+    // line-height: 22px;
+    // max-width: 70%; 
+    // margin: 0 auto;
+    // color: #fff;
 
-    ${BiggerThanMedium} {
-        font-size: 22px;
-        line-height: 26px;
-    }
-`
+    // ${BiggerThanMedium} {
+    //     font-size: 22px;
+    //     line-height: 26px;
+    // }
+// `
 
 const Home = () => <HomeStyle id="home">
     <Content>

@@ -104,10 +104,14 @@ const ContactRows = styled.div`
 `
 
 const ContactHalfColumn = styled.div`
-  flex-basis: 45%;
+  flex-basis: 100%;
   color: ${Colors.BlackText};
   padding: 1em;
   text-align: justify;
+
+  ${BiggerThanMedium} {
+    flex-basis: 45%;
+  }
 `
 
 const ContactFullRows = styled.div`
@@ -148,7 +152,7 @@ const Contact = () => <ContactStyle id="contact">
         </ContactHalfColumn>
       </ContactRows>
       <ContactFullRows>
-        <iframe title="dueebrasil" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7358.538257808268!2d-45.179879899999996!3d-22.755391499999998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31541a74223471bb!2sDUEE%20BRASIL!5e0!3m2!1spt-BR!2sbr!4v1594355624604!5m2!1spt-BR!2sbr" frameBorder="0" allowFullScreen aria-hidden="false" tabindex="0"></iframe>
+        <iframe title="dueebrasil" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7358.538257808268!2d-45.179879899999996!3d-22.755391499999998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31541a74223471bb!2sDUEE%20BRASIL!5e0!3m2!1spt-BR!2sbr!4v1594355624604!5m2!1spt-BR!2sbr" frameBorder="0" allowFullScreen aria-hidden="false"></iframe>
       </ContactFullRows>
     </ContactContent>
   </Content>

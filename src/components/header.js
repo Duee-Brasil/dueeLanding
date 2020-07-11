@@ -1,14 +1,14 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { BiggerThanMedium } from "./breakpoints"
+import { BiggerThanMedium, Colors } from "./breakpoints"
 import { Icon } from '@iconify/react';
 import menuIcon from '@iconify/icons-mdi-light/menu';
 
 const Menu = styled.header`
   transition: background-color .2s linear;
   z-index: 99 !important;
-  background-color: #000;
+  background-color: ${Colors.Black};
   width: 100vw;
   top: 0;
   position: fixed;

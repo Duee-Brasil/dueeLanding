@@ -1,14 +1,19 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
+import { InlineIcon } from '@iconify/react';
+import chevronRight from '@iconify/icons-mdi-light/chevron-right';
 import { BiggerThanMedium, Colors } from './breakpoints'
-import background from './demo-images/background_img_02.jpg'
+import Starbucks from '../images/starbucks.jpg'
+import Bluemoon from '../images/bluemoon.jpg'
+import Made from '../images/made.jpg'
+import Maille from '../images/maille.jpg'
+import Casal from '../images/cg.png'
+import Oito from '../images/oito.jpg'
+
 
 const PortfolioStyle = styled.div`
   background-color: ${Colors.Black}; 
-  /* background-image: url(${background}); 
-  background-repeat: no-repeat; 
-  background-position: center top; 
-  background-size: auto; */
   padding: 0;
   display: flex;
   justify-content: center;
@@ -47,7 +52,6 @@ const PortfolioContent = styled.div`
     ${BiggerThanMedium} {
         order: 1;
         flex: 2;
-        padding: 2em;
         margin-top: 385px;
     }
 `
@@ -104,82 +108,182 @@ const PortfolioLabel = styled.h2`
     }
 `
 
-const Portfolio = () => <PortfolioStyle id="portfolio">
-<Content>
-  <PortfolioTitle>
-    <PortfolioNumber>
-      <span>02</span>
-    </PortfolioNumber>
-    <PortfolioLabel>Portfolio</PortfolioLabel>
-  </PortfolioTitle>
-  <PortfolioContent className="section-content-holder portfolio-holder left">
-    <div className="grid" id="portfolio-grid">
-      <div className="grid-sizer"></div>
-      <div className="grid-item element-item p_one">
-        <a href="single-portfolio.html">
-          <img src="demo-images/portfolio_item_01.jpg" alt="" />
-          <div className="portfolio-text-holder">
-            <div className="portfolio-text-wrapper">
-              <p className="portfolio-type">
-                <img src="images/icon_post.svg" alt="" />
-              </p>
-              <p className="portfolio-text">PSD MOCKUP</p>
-              <p className="portfolio-sec-text">Smart Watch</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div className="grid-item element-item p_one_half">
-        <a href="single-portfolio2.html">
-          <img src="demo-images/portfolio_item_02.jpg" alt="" />
-          <div className="portfolio-text-holder">
-            <div className="portfolio-text-wrapper">
-              <p className="portfolio-type">
-                <img src="images/icon_post.svg" alt="" />
-              </p>
-              <p className="portfolio-text">PSD MOCKUP</p>
-              <p className="portfolio-sec-text">Smart Watch</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div className="grid-item element-item p_one_half">
-        <a data-rel="prettyPhoto[gallery1]" href="demo-images/portfolio_item_08.jpg">
-          <img src="demo-images/portfolio_item_08.jpg" alt="" />
-          <div className="portfolio-text-holder">
-            <div className="portfolio-text-wrapper">
-              <p className="portfolio-type">
-                <img src="images/icon_post.svg" alt="" />
-              </p>
-              <p className="portfolio-text">PSD MOCKUP</p>
-              <p className="portfolio-sec-text">Smart Watch</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div className="grid-item element-item p_one">
-        <a data-rel="prettyPhoto[gallery1]" href="demo-images/portfolio_item_05.jpg">
-          <img src="demo-images/portfolio_item_05.jpg" alt="" />
-          <div className="portfolio-text-holder">
-            <div className="portfolio-text-wrapper">
-              <p className="portfolio-type">
-                <img src="images/icon_post.svg" alt="" />
-              </p>
-              <p className="portfolio-text">PSD MOCKUP</p>
-              <p className="portfolio-sec-text">Smart Watch</p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
+const PortfolioGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  
+`
 
-    <div className="clear"></div>
-    <div className="block portfolio-load-more-holder">
-      <a target="_self" className="more-posts">LOAD MORE</a>
-      <img src="images/icon_infinity.svg" alt="Load more" />
-    </div>
-  </PortfolioContent>
-</Content>
+const PortfolioTitleHover = styled.div`
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1;
+  font-size: 20px;
+  background-color: ${Colors.White};
+  color: ${Colors.BlackText};
+  text-align: center;
+  visibility: hidden;
+  transition: ease-in-out .5s linear;
+`
+
+const CaseTitle = styled.p`
+    font-family: 'Montserrat', sans-serif;    
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+`
+
+const CaseSubTitle = styled.p`
+  font-family: 'Montserrat', sans-serif;    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #8e8da9;
+`
+
+const SeeMore = styled.div`
+  background-color: ${Colors.Pink};
+  width: 100%;
+  flex-basis: 100%;
+  justify-self: end;
+  justify-content: end;
+  margin-left: auto;
+  text-align: center;
+  padding: 2%;
+  margin-bottom: 5px;
+
+  ${BiggerThanMedium} {
+    width: 50%;
+    flex-basis: 50%;
+    flex-grow: 6;
+    margin-bottom: 0;
+  }
+  
+  a {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: bold;
+    font-size: 20px;
+    color: ${Colors.White};
+    line-height: 32px;
+    vertical-align: top;
+
+    ${BiggerThanMedium} {
+      font-size: 28px;
+      line-height: 42px;
+    }
+  }
+`
+
+const PortfolioGridOne = styled.div`
+  flex-basis: 100%;
+  flex-grow: 12;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  img {
+    width: 100%;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover {
+    ${PortfolioTitleHover} {
+      visibility: visible;
+    }
+  }
+`
+
+const PortfolioGridHalf = styled(PortfolioGridOne)`
+  flex-basis: 50%;
+  flex-grow: 6;
+`
+
+const Portfolio = () => <PortfolioStyle id="portfolio">
+  <Content>
+    <PortfolioTitle>
+      <PortfolioNumber>
+        <span>02</span>
+      </PortfolioNumber>
+      <PortfolioLabel>Portfolio</PortfolioLabel>
+    </PortfolioTitle>
+    <PortfolioContent>
+      <PortfolioGrid>
+        <PortfolioGridOne>
+          <Link to="https://dueebrasil.com.br/portfolio">
+            <img src={Starbucks} alt="" />
+            <PortfolioTitleHover>
+              <CaseTitle>Starbucks</CaseTitle>
+              <CaseSubTitle>Panetone Natal 2019</CaseSubTitle>
+            </PortfolioTitleHover>
+          </Link>
+        </PortfolioGridOne>
+        <PortfolioGridHalf>
+          <Link to="https://dueebrasil.com.br/portfolio">
+            <img src={Bluemoon} alt="" />
+            <PortfolioTitleHover>
+              <CaseTitle>Blue Moon</CaseTitle>
+              <CaseSubTitle>Mídia Digital</CaseSubTitle>
+            </PortfolioTitleHover>
+          </Link>
+        </PortfolioGridHalf>
+        <PortfolioGridHalf>
+          <Link to="https://dueebrasil.com.br/portfolio">
+            <img src={Made} alt="" />
+            <PortfolioTitleHover>
+              <CaseTitle>Made In Brazil</CaseTitle>
+              <CaseSubTitle>Mídia Digital</CaseSubTitle>
+            </PortfolioTitleHover>
+          </Link>
+        </PortfolioGridHalf>
+        <PortfolioGridHalf>
+          <Link to="https://dueebrasil.com.br/portfolio">
+            <img src={Maille} alt="" />
+            <PortfolioTitleHover>
+              <CaseTitle>Maille</CaseTitle>
+              <CaseSubTitle>Mídia Digital</CaseSubTitle>
+            </PortfolioTitleHover>
+          </Link>
+        </PortfolioGridHalf>
+        <PortfolioGridHalf>
+          <Link to="https://dueebrasil.com.br/portfolio">
+            <img src={Casal} alt="" />
+            <PortfolioTitleHover>
+              <CaseTitle>Casal Garcia</CaseTitle>
+              <CaseSubTitle>Mídia Digital</CaseSubTitle>
+            </PortfolioTitleHover>
+          </Link>
+        </PortfolioGridHalf>
+        <PortfolioGridOne>
+          <Link to="https://dueebrasil.com.br/portfolio">
+            <img src={Oito} alt="" />
+            <PortfolioTitleHover>
+              <CaseTitle>Oito</CaseTitle>
+              <CaseSubTitle>Desenvolvimento Web App</CaseSubTitle>
+            </PortfolioTitleHover>
+          </Link>
+        </PortfolioGridOne>
+      </PortfolioGrid>
+
+      <SeeMore>
+        <Link to="https://dueebrasil.com.br/portfolio">
+          VER TODOS <InlineIcon icon={chevronRight} width={'42px'} />
+        </Link>
+      </SeeMore>
+    </PortfolioContent>
+  </Content>
 </PortfolioStyle>
 
 export default Portfolio

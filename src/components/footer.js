@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { Colors } from './breakpoints'
+import { Colors, BiggerThanMedium } from './breakpoints'
 import { Icon } from '@iconify/react';
 import instagramOutlined from '@iconify/icons-ant-design/instagram-outlined';
 import facebookOutlined from '@iconify/icons-ant-design/facebook-outlined';
@@ -10,14 +10,19 @@ import facebookOutlined from '@iconify/icons-ant-design/facebook-outlined';
 const FooterStyle = styled.footer`
     width: 100vw;
     background-color: ${Colors.Black};
-    line-height: 36px;
+    line-height: 28px;
     color: ${Colors.BlackText};
-    padding: 2em;
     display: flex;
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+    padding-top: 3em;
+
+    ${BiggerThanMedium} {
+        padding: 2em;
+        line-height: 36px;
+    }
 `
 
 const FooterRow = styled.div`
@@ -29,13 +34,19 @@ const FooterRow = styled.div`
 
 const LinkSite = styled.span`
     width: fit-content;
-    margin: 1em 3em;
-    font-size: 26px;
+    
+    font-size: 20px;
     font-weight: bold;
+    margin-top: 50px;
     margin-bottom: 50px;
 
     a {
         color: ${Colors.Pink};  
+    }
+
+    ${BiggerThanMedium} {
+        margin: 3em;
+        font-size: 32px;
     }
 `
 

@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { keyframes, css } from "styled-components"
+import styled from "styled-components"
 import { BiggerThanMedium, Colors } from './breakpoints'
 
 
@@ -104,122 +104,47 @@ const AboutRows = styled.div`
   justify-content: space-between;
 `
 
-const Visibility1 = keyframes`
-  2% {
-      visibility: visible;
-  }
-
-  100% {
-      visibility: hidden;
-  }
-`
-
-const Visibility2 = keyframes`
-  14% {
-      visibility: visible;
-  }
-
-  100% {
-      visibility: hidden;
-  }
-`
-
-const Visibility3 = keyframes`
-  28% {
-      visibility: visible;
-  }
-
-  100% {
-      visibility: hidden;
-  }
-`
-
-const Visibility4 = keyframes`
-  42% {
-      visibility: visible;
-  }
-
-  100% {
-      visibility: hidden;
-  }
-`
-
-const Visibility5 = keyframes`
-  56% {
-      visibility: visible;
-  }
-
-  100% {
-      visibility: hidden;
-  }
-`
-
-const Visibility6 = keyframes`
-  70% {
-      visibility: visible;
-  }
-
-  100% {
-      visibility: hidden;
-  }
-`
-
-const Blinder = css`
-span {
-    &:nth-child(1){
-      animation: ${Visibility1} 5s step-end infinite;
-    }
-
-    &:nth-child(2){
-      animation: ${Visibility2} 5s step-end infinite;
-    }
-
-    &:nth-child(3){
-      animation: ${Visibility3} 5s step-end infinite;
-    }
-
-    &:nth-child(4){
-      animation: ${Visibility4} 5s step-end infinite;
-    }
-
-    &:nth-child(5){
-      animation: ${Visibility5} 5s step-end infinite;
-    }
-
-    &:nth-child(6){
-      animation: ${Visibility6} 5s step-end infinite;
-    }
-  }
-`
-
 const AboutFullRows = styled.div`
-  padding: 1em;
-  padding-left: 3em;
-  font-size: 40px;
+  padding-bottom: 2em;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.5em;
+  line-height: 1.3em;
   justify-content: center;
+  text-align: center;
 
-  ${Blinder}
+  ${BiggerThanMedium} {
+    padding-left: 3em;
+    line-height: 1.5em;
+    font-size: 40px;
+  }
 `
 
 const AboutTextTitle = styled.div`
   flex-basis: 100%;
-  height: 80px;
+  height: 30px;
   margin-top: -10px;
   color: ${Colors.Black};
   word-break: break-all;
   text-overflow: clip;
-  font-size: 95px;
+  font-size: 35px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
+
+  ${BiggerThanMedium} {
+    font-size: 95px;
+    height: 80px;
+  }
 `
 
 const AboutHalfColumn = styled.div`
-  flex-basis: 45%;
+  flex-basis: 100%;
   color: ${Colors.BlackText};
   padding: 1em;
   text-align: justify;
+
+  ${BiggerThanMedium} {
+    flex-basis: 45%;
+  }
 `
 
 const About = () =>
@@ -229,7 +154,7 @@ const About = () =>
         <AboutNumber>
           <span>03</span>
         </AboutNumber>
-        <AboutLabel>CRAFTERS</AboutLabel>
+        <AboutLabel>PERFIL</AboutLabel>
       </AboutTitle>
       <AboutContent>
         <AboutRows>
@@ -248,7 +173,7 @@ const About = () =>
         </AboutRows>
 
         <AboutFullRows>
-            <span>Eventos? </span><span>A gente faz.</span><br />
+          <span>Eventos? </span><span>A gente faz.</span><br />
           <span>Digital? </span><span>A gente faz.</span><br />
           <span>Branding? </span><span>A gente faz.</span>
         </AboutFullRows>
