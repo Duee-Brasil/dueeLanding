@@ -94,7 +94,6 @@ const Header = () => {
         <li><Link to="#services">Serviços</Link></li>
         <li><Link to="#portfolio">Portfolio</Link></li>
         <li><Link to="#about">Somos Leões</Link></li>
-        <li><Link to="#skills">Skills</Link></li>
         <li><Link to="#contact">Contato</Link></li>
       </ListLinks>
     </Navbar>

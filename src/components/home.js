@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { BiggerThanMedium, Colors } from "./breakpoints"
-import backgroundWide from '../images/leaocolorido-wide.jpg'
+import backgroundWide from '../images/leaocolorido-wide2.jpg'
 import backgroundPort from '../images/leaocolorido-portrait.jpg'
 import logo from '../images/logo_branco.png'
 
