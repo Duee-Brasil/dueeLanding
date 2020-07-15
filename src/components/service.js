@@ -96,7 +96,7 @@ const SectionLabel = styled.h2`
     ${BiggerThanMedium} {
         font-size: 109px;
         width: 245px;
-        line-height: 83px;
+        line-height: 93px;
         margin-top: 10px;
         margin-left: 115px;
     }

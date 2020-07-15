@@ -122,7 +122,7 @@ const AboutFullRows = styled.div`
 const AboutTextTitle = styled.div`
   flex-basis: 100%;
   height: 30px;
-  margin-top: -10px;
+  /* margin-top: 30px; */
   color: ${Colors.Black};
   word-break: break-all;
   text-overflow: clip;
@@ -131,7 +131,7 @@ const AboutTextTitle = styled.div`
   font-weight: 900;
 
   ${BiggerThanMedium} {
-    font-size: 95px;
+    font-size: 85px;
     height: 80px;
   }
 `
@@ -159,7 +159,7 @@ const About = () =>
       <AboutContent>
         <AboutRows>
           <AboutTextTitle>
-            SOMOS LEÕES
+            #SOMOSLEÕES
           </AboutTextTitle>
           <AboutHalfColumn>
             A Duee é uma agência full service, que preza pela comunicação integrada, porque sabe que o mundo não se divide em on e off.

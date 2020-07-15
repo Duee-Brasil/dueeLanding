@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "DueeBrasil",
   "private": true,
-  "description": "Duee Brasil.",
+  "description": "Agência full service com a expertise necessária para gerenciar múltiplas estratégias de marketing e publicidade, em vários tipos de mídia diferentes, online e offline.",
   "version": "1.0.0",
   "author": "letgodoy.com",
   "dependencies": {
@@ -23,12 +23,23 @@
   },
   "devDependencies": {
     "@iconify/icons-ant-design": "^1.0.8",
+    "@iconify/icons-bx": "^1.0.3",
     "@iconify/icons-mdi-light": "^1.0.5",
     "@iconify/react": "^1.1.3",
     "prettier": "2.0.5"
   },
   "keywords": [
-    "gatsby"
+    "marketing",
+    "publicidade",
+    "marketing para empresas",
+    "digital",
+    "brand",
+    "digital marketing",
+    "mkt digital",
+    "agência full service",
+    "branding",
+    "marketing offline",
+    "marketing online"
   ],
   "license": "0BSD",
   "scripts": {

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Duee Brasil`,
-    description: `Branding, Live MKT, Promoções, Digital e Desenvolvimento. A Gente Faz.`,
+    description: `Agência full service com a expertise necessária para gerenciar múltiplas estratégias de marketing e publicidade, em vários tipos de mídia diferentes, online e offline.`,
     author: `letgodoy.com`,
   },
   plugins: [
@@ -21,8 +21,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#111111`,
+        theme_color: `#e71576`,
         display: `minimal-ui`,
         icon: `src/images/logo_cinza.png`, // This path is relative to the root of the site.
       },

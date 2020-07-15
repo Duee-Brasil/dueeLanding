@@ -4,12 +4,17 @@ import styled from "styled-components"
 import { InlineIcon } from '@iconify/react';
 import chevronRight from '@iconify/icons-mdi-light/chevron-right';
 import { BiggerThanMedium, Colors } from './breakpoints'
-import Starbucks from '../images/starbucks.jpg'
-import Bluemoon from '../images/bluemoon.jpg'
-import Made from '../images/made.jpg'
-import Maille from '../images/maille.jpg'
-import Casal from '../images/cg.png'
-import Oito from '../images/oito.jpg'
+import StarbucksF from '../images/starbucks.jpg'
+import BluemoonF from '../images/bluemoon.jpg'
+import MadeF from '../images/made.jpg'
+import MailleF from '../images/maille.jpg'
+import CasalF from '../images/cg.jpg'
+import FaxeF from '../images/faxe.jpg'
+import Starbucks from '../images/starbuckslogo.png'
+import Bluemoon from '../images/bmlogo.png'
+import Made from '../images/madelogo.png'
+import Casal from '../images/casallogo.png'
+import Faxe from '../images/faxelogo.png'
 
 
 const PortfolioStyle = styled.div`
@@ -139,14 +144,6 @@ const CaseTitle = styled.p`
     margin-bottom: 10px;
 `
 
-const CaseSubTitle = styled.p`
-  font-family: 'Montserrat', sans-serif;    
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 100%;
-    color: #8e8da9;
-`
-
 const SeeMore = styled.div`
   background-color: ${Colors.Pink};
   width: 100%;
@@ -223,55 +220,49 @@ const Portfolio = () => <PortfolioStyle id="portfolio">
       <PortfolioGrid>
         <PortfolioGridOne>
           <Link to="https://dueebrasil.com.br/portfolio">
-            <img src={Starbucks} alt="" />
+            <img src={StarbucksF} alt="" />
             <PortfolioTitleHover>
-              <CaseTitle>Starbucks</CaseTitle>
-              <CaseSubTitle>Panetone Natal 2019</CaseSubTitle>
+              <CaseTitle><img src={Starbucks} alt="" /></CaseTitle>
             </PortfolioTitleHover>
           </Link>
         </PortfolioGridOne>
         <PortfolioGridHalf>
           <Link to="https://dueebrasil.com.br/portfolio">
-            <img src={Bluemoon} alt="" />
+            <img src={BluemoonF} alt="" />
             <PortfolioTitleHover>
-              <CaseTitle>Blue Moon</CaseTitle>
-              <CaseSubTitle>Mídia Digital</CaseSubTitle>
+              <CaseTitle><img src={Bluemoon} alt="" /></CaseTitle>
             </PortfolioTitleHover>
           </Link>
         </PortfolioGridHalf>
         <PortfolioGridHalf>
           <Link to="https://dueebrasil.com.br/portfolio">
-            <img src={Made} alt="" />
+            <img src={MadeF} alt="" />
             <PortfolioTitleHover>
-              <CaseTitle>Made In Brazil</CaseTitle>
-              <CaseSubTitle>Mídia Digital</CaseSubTitle>
+              <CaseTitle><img src={Made} alt="" /></CaseTitle>
             </PortfolioTitleHover>
           </Link>
         </PortfolioGridHalf>
         <PortfolioGridHalf>
           <Link to="https://dueebrasil.com.br/portfolio">
-            <img src={Maille} alt="" />
+            <img src={MailleF} alt="" />
             <PortfolioTitleHover>
               <CaseTitle>Maille</CaseTitle>
-              <CaseSubTitle>Mídia Digital</CaseSubTitle>
             </PortfolioTitleHover>
           </Link>
         </PortfolioGridHalf>
         <PortfolioGridHalf>
           <Link to="https://dueebrasil.com.br/portfolio">
-            <img src={Casal} alt="" />
+            <img src={CasalF} alt="" />
             <PortfolioTitleHover>
-              <CaseTitle>Casal Garcia</CaseTitle>
-              <CaseSubTitle>Mídia Digital</CaseSubTitle>
+              <CaseTitle><img src={Casal} alt="" /></CaseTitle>
             </PortfolioTitleHover>
           </Link>
         </PortfolioGridHalf>
         <PortfolioGridOne>
           <Link to="https://dueebrasil.com.br/portfolio">
-            <img src={Oito} alt="" />
+            <img src={FaxeF} alt="" />
             <PortfolioTitleHover>
-              <CaseTitle>Oito</CaseTitle>
-              <CaseSubTitle>Desenvolvimento Web App</CaseSubTitle>
+              <CaseTitle><img src={Faxe} alt="" /></CaseTitle>
             </PortfolioTitleHover>
           </Link>
         </PortfolioGridOne>

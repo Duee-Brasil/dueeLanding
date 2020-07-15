@@ -213,6 +213,13 @@ const Contact = () => {
             <p>Quer dar sugestões, tirar suas dúvidas, conhecer melhor a Duee Brasil ou solicitar um contato de nossa equipe?</p>
             <br />
             <p>É só preencher o formulário corretamente e entraremos em contato!</p>
+
+            <br />
+            <p>+55 11 95132-2976</p>
+            <p>Alameda Joaquim Eugênio de Lima, 696/700</p>
+            <p>Sala 172/174</p>
+            <p>Jardins, São Paulo - SP</p>
+            <p></p>
           </ContactHalfColumn>
           <ContactHalfColumn>
             <ContactForm onSubmit={sendEmail}>
