@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import emailjs from 'emailjs-com'
 import { BiggerThanMedium, Colors } from './breakpoints'
+import { Icon } from '@iconify/react';
+import mapMarker from '@iconify/icons-mdi-light/map-marker';
+import phoneIcon from '@iconify/icons-mdi-light/phone';
+import bxlWhatsapp from '@iconify/icons-bx/bxl-whatsapp';
 
 const Notifier = styled.div`
   position: fixed;
@@ -215,11 +219,10 @@ const Contact = () => {
             <p>É só preencher o formulário corretamente e entraremos em contato!</p>
 
             <br />
-            <p>+55 11 95132-2976</p>
-            <p>Alameda Joaquim Eugênio de Lima, 696/700</p>
-            <p>Sala 172/174</p>
-            <p>Jardins, São Paulo - SP</p>
-            <p></p>
+            
+            <p><Icon icon={mapMarker} /> Al. Joaquim Eugênio de Lima, 696 - 17 andar<br/ >Jardins, São Paulo - SP</p>
+            <p><Icon icon={phoneIcon} /> 11 2532-7152</p>
+            <p><Icon icon={bxlWhatsapp} /> +55 11 95132-2976</p>
           </ContactHalfColumn>
           <ContactHalfColumn>
             <ContactForm onSubmit={sendEmail}>

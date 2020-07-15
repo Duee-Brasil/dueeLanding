@@ -110,7 +110,7 @@ const ServiceItem = styled.div`
 
 const IconsLion = styled.img`
     display: inline-block;
-    width: 50px !important;
+    height: 50px !important;
     vertical-align: top;
 `
 
