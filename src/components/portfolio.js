@@ -15,6 +15,7 @@ import Bluemoon from '../images/bmlogo.png'
 import Made from '../images/madelogo.png'
 import Casal from '../images/casallogo.png'
 import Faxe from '../images/faxelogo.png'
+import Maille from '../images/maillelogo.png'
 
 
 const PortfolioStyle = styled.div`
@@ -246,7 +247,7 @@ const Portfolio = () => <PortfolioStyle id="portfolio">
           <Link to="https://dueebrasil.com.br/portfolio">
             <img src={MailleF} alt="" />
             <PortfolioTitleHover>
-              <CaseTitle>Maille</CaseTitle>
+              <CaseTitle><img src={Maille} alt="" /></CaseTitle>
             </PortfolioTitleHover>
           </Link>
         </PortfolioGridHalf>

@@ -18,27 +18,40 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Duee Brasil`,
+        short_name: `Duee`,
         start_url: `/`,
+        description: "Branding, Live MKT, Promoções, Digital e Desenvolvimento. A Gente Faz.",
         background_color: `#111111`,
         theme_color: `#e71576`,
         display: `minimal-ui`,
         icon: `src/images/logo_cinza.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '3318356694893542',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "UA-157627202-3", // Google Analytics / GA
+          //"AW-145-254-4497", // Google Ads / Adwords / AW //////trocarrrrrrrr
+        ], 
+          head: true,
+      },
+    },
     // {
-    //   resolve: `gatsby-plugin-nprogress`,
+    //   resolve: "gatsby-plugin-google-tagmanager",
     //   options: {
-    //     // Setting a color is optional.
-    //     color: `pink`,
-    //     showSpinner: true,
-    //     easing: 'ease',
-    //     speed: 500
-    //   },
+    //     id: "GTM-NGHBBP8",  //troooooocaaaarrrr
+    //     includeInDevelopment: false,
+    //     defaultDataLayer: { platform: "gatsby" },
+    //   }
     // },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
