@@ -46,10 +46,10 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
         <Footer />
-        <Whastapp href="https://api.whatsapp.com/send?phone=5511951322976" target="_blank">
+        {/* <Whastapp href="https://api.whatsapp.com/send?phone=5511951322976" target="_blank">
           <span>Fale conosco</span>
           <Icon icon={bxlWhatsapp} width="20px" height="20px" />
-        </Whastapp>
+        </Whastapp> */}
         {/* <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

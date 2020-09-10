@@ -222,7 +222,7 @@ const Contact = () => {
             
             <p><Icon icon={mapMarker} /> Al. Joaquim Eugênio de Lima, 696 - 17 andar<br/ >Jardins, São Paulo - SP</p>
             <p><Icon icon={phoneIcon} /> 11 2532-7152</p>
-            <p><Icon icon={bxlWhatsapp} /> +55 11 95132-2976</p>
+            {/* <p><Icon icon={bxlWhatsapp} /> +55 11 95132-2976</p> */}
           </ContactHalfColumn>
           <ContactHalfColumn>
             <ContactForm onSubmit={sendEmail}>
